@@ -413,7 +413,6 @@ button {
   font-size: 32px;
   margin-bottom: 20px;
 }
-
 .box-card {
   display: flex;
   flex-direction: column;
@@ -423,6 +422,7 @@ button {
 }
 
 .box-card2 {
+  display: none;
   height: 100%;
   text-align: center;
 }
@@ -447,6 +447,15 @@ button {
   font-size: 12px;
 }
 
+.box-card-container{
+  cursor: pointer;
+}
+.box-card-container:hover .box-card{
+  display: none;
+}
+.box-card-container:hover .box-card2{
+  display: block;
+}
 .card-box {
   position: relative;
   padding: 30px;
@@ -658,18 +667,21 @@ button {
   margin-top: 20px;
 }
 
+.portfolio-img{
+  position: relative;
+}
 .portfolio-img img {
   width: 100%;
   object-fit: cover;
 }
-
 .plus {
   position: relative;
 }
 
 .plus button {
+  display: block;
   background: var(--yellow);
-  opacity: 0.9;
+  opacity: 0;
   border: none;
   width: 100%;
   position: absolute;
@@ -677,6 +689,7 @@ button {
   bottom: 0;
   left: 0;
   right: 0;
+  transition: all .5s;
 }
 
 .plus button img {
@@ -687,6 +700,11 @@ button {
   width: 100%;
   object-fit: cover;
   margin: 0;
+}
+
+.plus:hover button{
+  opacity: .9;
+  transition: all .5s;
 }
 
 .box-blog {
